@@ -3,7 +3,8 @@
  Author peerigon UG @peerigon
  */
 
-var marked = require("marked");
+var marked = require('marked');
+var hljs = require('highlight.js');
 
 marked.setOptions({
     renderer: new marked.Renderer(),
@@ -13,7 +14,10 @@ marked.setOptions({
     pedantic: false,
     sanitize: true,
     smartLists: true,
-    smartypants: false
+    smartypants: false,
+    highlight: function (code, lang) {
+      return hljs.highlight(lang, code).value;
+    }
 });
 
 module.exports = function(markdown) {

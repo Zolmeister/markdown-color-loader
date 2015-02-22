@@ -1,24 +1,24 @@
-markdown-loader
+markdown-color-loader
 ===============
 
-markdown loader for webpack
+markdown color loader for webpack
 
 
-## Usage 
+## Usage
 
 ```javascript
-var html = require("html!markdown!./README.md");
+var html = require("html!markdown-color!./README.md");
 ```
 
 ## Recommended Configuration
 
-Best served with html-loader. 
+Best served with html-loader.
 
 ```javascript
 {
     module: {
         loaders: {
-            { test: /\.md$/, loader: "html!markdown" },
+            { test: /\.md$/, loader: "html!markdown-color" },
         ]
     }
 }
